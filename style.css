@@ -1,0 +1,50 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.blackbox {
+  padding: 1em;
+  background: black;
+  color: white;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
+.center {
+  text-align: center;
+}
+
+.greybox {
+  padding: 1em;
+  background: lightgrey;
+  color: black;
+  border: 1px;
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.column:nth-child(1) {
+  flex-grow: 2; /* Columna 1 con ancho relativo 2 mayor que Col. 2*/
+}
+
+.column:nth-child(2) {
+ /* background-color: lightgray;*/
+    flex-grow: 1; 
+}

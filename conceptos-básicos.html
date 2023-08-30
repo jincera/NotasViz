@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Conceptos básicos | Visualización de Información</title>
+  <meta name="description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Conceptos básicos | Visualización de Información" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Conceptos básicos | Visualización de Información" />
+  
+  <meta name="twitter:description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  
+
+<meta name="author" content="José Incera" />
+
+
+<meta name="date" content="2023-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="mejores-prácticas-y-recomendaciones.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Narrativas y Visualización. Notas de Curso</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentación</a></li>
+<li class="chapter" data-level="2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html"><i class="fa fa-check"></i><b>2</b> Conceptos básicos</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#la-visualización-de-información"><i class="fa fa-check"></i><b>2.1</b> La visualización de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#por-qué-utilizar-visualización"><i class="fa fa-check"></i>¿Por qué utilizar visualización?</a></li>
+<li class="chapter" data-level="2.1.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#por-qué-visualizar"><i class="fa fa-check"></i><b>2.1.1</b> ¿Por qué visualizar?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#la-percepción-visual"><i class="fa fa-check"></i><b>2.1.2</b> La percepción visual</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#qué-es-una-gráfica-por-qué-utilizar-gráficas-para-representar-información"><i class="fa fa-check"></i><b>2.2</b> ¿Qué es una gráfica? ¿Por qué utilizar gráficas para representar información?</a></li>
+<li class="chapter" data-level="2.3" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#tipos-de-datos"><i class="fa fa-check"></i><b>2.3</b> Tipos de datos</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#semántica"><i class="fa fa-check"></i><b>2.3.1</b> Semántica</a></li>
+<li class="chapter" data-level="2.3.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#conjunto-de-datos"><i class="fa fa-check"></i><b>2.3.2</b> Conjunto de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#marcadores-y-canales-visuales"><i class="fa fa-check"></i><b>2.4</b> Marcadores y canales visuales</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#efectividad-y-expresividad-de-los-canales-visuales"><i class="fa fa-check"></i><b>2.4.1</b> Efectividad y expresividad de los canales visuales</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html"><i class="fa fa-check"></i><b>3</b> Mejores prácticas y recomendaciones</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#el-color"><i class="fa fa-check"></i><b>3.1</b> El color</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#propiedades-del-color"><i class="fa fa-check"></i><b>3.1.1</b> Propiedades del color</a></li>
+<li class="chapter" data-level="3.1.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#factores-a-tomar-en-cuenta"><i class="fa fa-check"></i><b>3.1.2</b> Factores a tomar en cuenta</a></li>
+<li class="chapter" data-level="3.1.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#empleo-del-color-como-canal-visual"><i class="fa fa-check"></i><b>3.1.3</b> Empleo del color como canal visual</a></li>
+<li class="chapter" data-level="3.1.4" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#tipos-de-paletas-de-colores"><i class="fa fa-check"></i><b>3.1.4</b> Tipos de paletas de colores</a></li>
+<li class="chapter" data-level="3.1.5" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#no-abusar-del-color"><i class="fa fa-check"></i><b>3.1.5</b> No abusar del color</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#reordenamiento"><i class="fa fa-check"></i><b>3.2</b> Reordenamiento</a></li>
+<li class="chapter" data-level="3.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#etiquetado"><i class="fa fa-check"></i><b>3.3</b> Etiquetado</a></li>
+<li class="chapter" data-level="3.4" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#gráficas-en-3-dimensiones"><i class="fa fa-check"></i><b>3.4</b> Gráficas en 3 dimensiones</a></li>
+<li class="chapter" data-level="3.5" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#malas-prácticas-a-evitar"><i class="fa fa-check"></i><b>3.5</b> Malas prácticas a evitar</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#sugerir-tendencias-donde-no-las-hay"><i class="fa fa-check"></i><b>3.5.1</b> Sugerir tendencias donde no las hay</a></li>
+<li class="chapter" data-level="3.5.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#origen-de-los-ejes"><i class="fa fa-check"></i><b>3.5.2</b> Origen de los ejes</a></li>
+<li class="chapter" data-level="3.5.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#gráficas-de-pastel"><i class="fa fa-check"></i><b>3.5.3</b> Gráficas de pastel</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#comentarios-finales-y-máximas-sobre-la-conversación"><i class="fa fa-check"></i><b>3.6</b> Comentarios finales y máximas sobre la conversación</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html"><i class="fa fa-check"></i><b>4</b> Tipos de gráficos básicos</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#introducción"><i class="fa fa-check"></i><b>4.1</b> Introducción</a></li>
+<li class="chapter" data-level="4.2" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#representación-de-los-datos-tabulares"><i class="fa fa-check"></i><b>4.2</b> Representación de los datos tabulares</a></li>
+<li class="chapter" data-level="4.3" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#visualización-de-datos-tabulares"><i class="fa fa-check"></i><b>4.3</b> Visualización de datos tabulares</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#gráficas-de-barras-puntos-y-líneas-pastel-mapas-de-calor-y-de-dispersión"><i class="fa fa-check"></i><b>4.3.1</b> Gráficas de barras, puntos y líneas, pastel, mapas de calor y de dispersión</a></li>
+<li class="chapter" data-level="4.3.2" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#partes-de-un-todo"><i class="fa fa-check"></i><b>4.3.2</b> Partes de un todo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#gráficas-para-sumarización-de-datos"><i class="fa fa-check"></i><b>4.3.3</b> Gráficas para sumarización de datos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html"><i class="fa fa-check"></i><b>5</b> Redes jerárquicas y redes de vínculos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#relaciones-jerárquicas"><i class="fa fa-check"></i><b>5.1</b> Relaciones jerárquicas</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#mapas-de-árbol"><i class="fa fa-check"></i><b>5.1.1</b> Mapas de árbol</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#grafos"><i class="fa fa-check"></i><b>5.2</b> Grafos</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#cómo-se-forman-los-modelos-de-redes"><i class="fa fa-check"></i><b>5.2.1</b> Cómo se forman los modelos de redes</a></li>
+<li class="chapter" data-level="5.2.2" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#modelos-de-redes"><i class="fa fa-check"></i><b>5.2.2</b> Modelos de redes</a></li>
+<li class="chapter" data-level="5.2.3" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#propiedades-de-las-redes"><i class="fa fa-check"></i><b>5.2.3</b> Propiedades de las redes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html"><i class="fa fa-check"></i><b>6</b> Gráficas geoespaciales</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#proyecciones"><i class="fa fa-check"></i><b>6.1</b> Proyecciones</a></li>
+<li class="chapter" data-level="6.2" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#mapas-de-coropletas"><i class="fa fa-check"></i><b>6.2</b> Mapas de coropletas</a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#mapas-geoespaciales-en-excel"><i class="fa fa-check"></i>Mapas geoespaciales en Excel</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Visualización de Información</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="conceptos-básicos" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Conceptos básicos<a href="conceptos-básicos.html#conceptos-básicos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este capítulo presenta los conceptos básicos del curso de manera introductoria: qué es la visualización de datos, cuál es su objetivo y con qué fin se emplea, así como el sistema perceptual, entre otros puntos importantes. El objetivo es profundizar en la creación de visualizaciones de datos y conocer los componentes esenciales en el despliegue de datos de forma gráfica.</p>
+<p>También se comenzará a trabajar en cómo representar los datos a través de elementos visuales. Para ello, se explicarán los diferentes componentes que se pueden encontrar en una gráfica y se utilizará y aprenderá la notación esencial para comprenderlas.</p>
+<p>No podemos olvidar que las gráficas cuentan una historia, una relación con datos, y por ello, no solo es esencial conocer sus componentes, sino también, saber identificar los tipos de datos con los que trabajamos. Los datos son el elemento base para poder crear narrativas y comprender problemáticas.</p>
+<p>Con este curso se aprenderemos a tomar decisiones, teniendo siempre como referencia la interpretación de los datos representados gráficamente. Para esto resulta importante:</p>
+<ul>
+<li>Realizar una taxonomía de ellos.</li>
+<li>Saber cuáles son sus propiedades.</li>
+<li>Conocer cómo esas propiedades se mapean a las propiedades de las gráficas.</li>
+</ul>
+<p>El capítulo concluirá profundizando un poco más en el sistema perceptual y mostrará cuáles son los elementos que se utilizan para desplegar información gráfica (los canales visuales).</p>
+<div id="la-visualización-de-información" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> La visualización de información<a href="conceptos-básicos.html#la-visualización-de-información" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La visualización de información es la comunicación de la misma, <strong>utilizando representaciones gráficas</strong>. Los sistemas de cómputo para visualización proveen representaciones visuales de conjuntos de datos diseñadas para ayudar a la gente a realizar sus tareas de una manera más eficiente.</p>
+<p>En la actualidad, los datos lo son todo. Conocida es la frase de <strong>“los datos son el nuevo petróleo”</strong>, pero estos datos no siempre son fáciles de comprender y utilizar de manera eficaz. Por lo tanto, la representación visual de los datos consiste en <strong>sintetizar y presentar información de una manera mucho más eficiente y fácil de analizar</strong>.</p>
+<div id="por-qué-utilizar-visualización" class="section level3 unnumbered hasAnchor">
+<h3>¿Por qué utilizar visualización?<a href="conceptos-básicos.html#por-qué-utilizar-visualización" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Dependiendo del área de trabajo, el uso de las visualizaciones puede ser muy variado. Aunque de manera generalizada lo que se busca suele ser:
+* La validación de una hipótesis.
+* Analizar la información.
+* Reconocer patrones y tendencias.
+* Descubrir y crear nueva información.
+* Comunicar más claramente información.</p>
+<p>Todo lo anterior con el objetivo de poder <strong>contar historias con los datos y tomar las mejores decisiones</strong>. Para ello, es importante saber que la elección del tipo de gráfica y su diseño deben ayudar a satisfacer de la manera más eficaz posible estos objetivos.</p>
+</div>
+<div id="por-qué-visualizar" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> ¿Por qué visualizar?<a href="conceptos-básicos.html#por-qué-visualizar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="el-ser-humano-es-visual" class="section level5 unnumbered hasAnchor">
+<h5>El ser humano es visual<a href="conceptos-básicos.html#el-ser-humano-es-visual" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>El ser humano es visual. Recibe más información por el sentido de la vista, que por todos los demás sentidos juntos. En la retina existen alrededor de 130 millones de foto-receptores que conducen información hacia el cerebro. Esta cifra representa aproximadamente el 70 % de los receptores sensoriales de nuestros cinco sentidos <span class="citation">(<a href="#ref-Few2012" role="doc-biblioref">Few 2001</a>)</span>.</p>
+</div>
+<div id="el-procesamiento-de-la-información-es-en-paralelo" class="section level5 unnumbered hasAnchor">
+<h5>El procesamiento de la información es en paralelo<a href="conceptos-básicos.html#el-procesamiento-de-la-información-es-en-paralelo" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>La información visual que llega al cerebro es procesada en paralelo en más de 20 regiones para reconocer estímulos, patrones, formas y, eventualmente, darle sentido a la imagen. Por ello, algunos investigadores estiman que alrededor del 50 % del cerebro, está involucrado en el procesamiento de información visual <span class="citation">(<a href="#ref-Ware2008" role="doc-biblioref">Ware 2008</a>)</span> <span class="citation">(<a href="#ref-Ware2013" role="doc-biblioref">Ware 2013</a>)</span>.</p>
+</div>
+<div id="la-vista-es-el-sentido-que-más-información-aporta" class="section level5 unnumbered hasAnchor">
+<h5>La vista es el sentido que más información aporta<a href="conceptos-básicos.html#la-vista-es-el-sentido-que-más-información-aporta" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>En definitiva, el sentido de la vista es un “canal” con un enorme “ancho de banda” hacia al cerebro, es decir, a través de él se pude asimilar una enorme cantidad de información. Podemos notar una gran diferencia con, por ejemplo, el sentido del oído que tiene alrededor de 16,000 sensores, pero procesa la información de manera secuencial.</p>
+<p>La frase <em>una imagen dice más que mil palabras</em> defiende este punto de vista, y resalta la importancia de lo visual. Aunque hay que tomar precauciones y ser cautelosos al menos por dos razones. En primer lugar, porque, <strong>la primera fase en el proceso de visualización ocurre muy rápidamente y de manera inconsciente</strong>, casi instintiva, pero suficiente para predisponer el cerebro a una interpretación que no necesariamente es correcta. En segundo lugar, porque <strong>si bien la imagen dice mil palabras, no habla por sí misma</strong> y, por tanto, hay que asegurarse de que esas palabras son las que deseamos expresar.</p>
+</div>
+</div>
+<div id="la-percepción-visual" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> La percepción visual<a href="conceptos-básicos.html#la-percepción-visual" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Entender cómo funciona la percepción visual, va a ayudar a diseñar mejores gráficas. El cerebro tiene sus propias reglas. El ser humano percibe más fácil y rápidamente ciertos patrones que otros. Con base en ello, se pueden presentar los datos de manera tal que la información importante sobresalga. Si desobedecemos esas reglas, las gráficas terminarán siendo incomprensibles o engañosas.</p>
+<p>La percepción visual inicia con la excitación de los conos y bastones, los receptores fotosensibles que se encuentran en la retina y se conectan al nervio óptico.</p>
+<ul>
+<li><p>Los bastones se especializan en percibir luz tenue y registran tonalidades de blanco y negro.</p></li>
+<li><p>Los conos detectan estímulos más brillantes y se agrupan en tres categorías en función de las tonalidades que mejor perciben: rojo, verde y azul.</p></li>
+</ul>
+<p>Los estímulos detectados por los conos y bastones viajan como señales electroquímicas a través del nervio óptico hacia el cerebro, que es donde ocurre la percepción.</p>
+<div id="proceso-de-percepción-visual" class="section level4 unnumbered hasAnchor">
+<h4>Proceso de percepción visual<a href="conceptos-básicos.html#proceso-de-percepción-visual" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A continuación se detalla cómo se desarrolla el proceso de percepción visual a través de tres distintos tipos o niveles de memoria:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Memoria icónica</strong>. En esta memoria se alojan los <strong>fragmentos de información</strong> recibida a través del nervio óptico por no más de 200 milisegundos. Se realiza un primer procesamiento extremadamente rápido, automático e inconsciente (por eso se le llama procesamiento preatentivo), en el que únicamente se reconocen ciertos atributos, como el color, la textura y la posición de un objeto en un plano de dos dimensiones, entre otros. Esos son los atributos que “saltan a la vista” y los que se tendrán que privilegiar a la hora de diseñar gráficas donde lo que se busque sea resaltar algo en particular.</p></li>
+<li><p><strong>Memoria de trabajo</strong>. De la memoria icónica, los fragmentos de información pasan a la memoria de trabajo, donde se agrupan en <strong>bloques que empiezan a tomar sentido</strong>. Aquí inicia el procesamiento consciente o atentivo de la percepción visual.</p></li>
+</ol>
+<p>Pero lo interesante de la memoria de trabajo es que es temporal y de capacidad limitada. Si los estímulos visuales que conforman los bloques no se mantienen, estos desaparecerán de la memoria de trabajo después de unos cuantos segundos.</p>
+<p>Además, solamente pueden retenerse ahí unos tres o cuatro bloques. Para que sean admitidos nuevos elementos de información desde la memoria icónica, necesariamente algunos bloques tendrán que ser eliminados. Por ello, si se cambia rápidamente las representaciones visuales o las gráficas contienen muchos elementos de información, todos los elementos no podrán ser retenidos simultáneamente; unos estarán continuamente remplazando a los otros, lo que puede causar fatiga y distracción en el observador. Para sacarle el mayor beneficio posible, hay que tratar de <strong>evitar saturar las imágenes con demasiados componentes de información</strong>, porque el cerebro no los puede asimilar rápidamente.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Memoria a largo plazo</strong>. Cuando se decide almacenar información visual, lo que ocurre es que a través de un proceso de repetición, ya sea consciente o inconsciente, los bloques de información en la memoria de trabajo pasan a tejer complejas redes neuronales. Esto es lo que crea la memoria de largo plazo, entrando en juego otros espacios de nuestro cerebro, para, por fin, <strong>encontrar relaciones para la identificación de patrones y reconocimiento de imágenes</strong>. También se generan las asociaciones que permiten recordar o recuperar esas imágenes almacenadas en el cerebro.</li>
+</ol>
+<p>Mediante el proceso anterior, la interpretación de una gráfica pasa por la identificación inconsciente de algunos elementos, y por el reconocimiento de algunos patrones. Por ello, al diseñar representaciones visuales <strong>es importante tener en cuenta al público objetivo</strong> a quien van a estar dirigidas, pues ellos ya han trabajo su memoria a largo plazo y sus condiciones neuronales o espacios de memoria, identificarán más rápidamente ciertos patrones, que aquellos que no lo hayan hecho.</p>
+</div>
+<div id="la-fase-preatentiva" class="section level4 unnumbered hasAnchor">
+<h4>La fase preatentiva<a href="conceptos-básicos.html#la-fase-preatentiva" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A la asimilación casi instintiva, es a lo que se denomina preatentiva (<em>pre-attentive</em>), y hace referencia al proceso de asimilación/captura de información que realizamos a través de los sentidos, de una manera inconsciente. A continuación, destacamos algunas características propias de este proceso:</p>
+<ul>
+<li><p>De manera muy rápida se identifican diferencias en color y en la posición del estímulo en un plano bi-dimensional, y empezamos a reaccionar. Nuestro cerebro se prepara para tratar de interpretar estos cambios o esos estímulos que se empiezan a presentar.</p></li>
+<li><p>El cerebro reacciona en menos de 250 ms. Comprender este comportamiento inevitable del cerebro, es fundamental a la hora de diseñar gráficas para poder utilizarlo a nuestro favor. Es decir, para conseguir que el receptor comprenda y preste atención a los puntos que nosotros queremos llegar. De esta manera evitaremos distracciones, que no nos van a llevar al objetivo que buscamos, que es ser eficientes en la representación de la información.</p></li>
+<li><p>Se ralentiza si se mezclan varias características. Lo que ocurre es que vamos a pasar por diferentes fases de retención de información y esto puede ser agotador.</p></li>
+</ul>
+<p>Recordemos que el 70% de los receptores sensoriales se encuentran en los conos y bastones detrás de nuestros ojos e inevitablemente somos más sensibles a ciertos de estímulos visuales que a otros. El sentido de la vista, por lo tanto, es fundamental para nuestra condición humana y para nuestra comprensión de lo que está pasando en nuestro entorno.</p>
+</div>
+</div>
+</div>
+<div id="qué-es-una-gráfica-por-qué-utilizar-gráficas-para-representar-información" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> ¿Qué es una gráfica? ¿Por qué utilizar gráficas para representar información?<a href="conceptos-básicos.html#qué-es-una-gráfica-por-qué-utilizar-gráficas-para-representar-información" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Una definición aproximada de gráfica es la que da la RAE (2022) <strong>“representación de datos numéricos por medio de una o varias líneas que hacen visible la relación que esos datos guardan entre sí”</strong>. Tomando como referencia esta definición, podemos localizar los principales componentes que la conforman:</p>
+<ul>
+<li><strong>Valores desplegados</strong> en un área delimitada por uno o más ejes</li>
+<li><strong>Valores codificados</strong> como objetos visuales en relación a los ejes</li>
+<li><strong>Los ejes proporcionan escalas</strong> (cuantitativas y categóricas) usadas para etiquetar y asignar valores a los objetos.</li>
+</ul>
+<p>Todos estos son elementos necesarios para poder comprender mejor lo que se quiere comunicar, pero quizás no son suficientes. Es muy recomendable <strong>añadir elementos adicionales</strong>, como el título de la gráfica, etiquetas de los ejes y, la leyenda que explica qué significa cada color, para que la gráfica pueda ser comprendida sin que haya un narrador que la tenga que explicar.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ejgraf"></span>
+<img src="figuras/ejgraf.JPG" alt="*Elementos de una gráfica*" width="60%" />
+<p class="caption">
+Figura 2.1: <em>Elementos de una gráfica</em>
+</p>
+</div>
+<p>Dicho lo anterior, hay que tener cautela y <strong>no utilizar demasiados elementos adicionales</strong> (como anotaciones sobre la gráfica, valores individuales de las barras, mallas auxiliares de los ejes, entre otros) que pueden sobrecargar la gráfica, dificultando así su comprensión.</p>
+</div>
+<div id="tipos-de-datos" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Tipos de datos<a href="conceptos-básicos.html#tipos-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Las narrativas gráficas están basadas en <strong>relaciones entre datos</strong>, por ello es importante conocer sus características y así elegir los mejores objetos visuales que ayuden a describir esa relación. Hay muchas maneras de clasificar los datos; en este curso se seguirá la clasificación propuesta por <span class="citation">(<a href="#ref-Munzner2014" role="doc-biblioref">Munzner 2014</a>)</span>, que los separa en dos grandes categorías:</p>
+<div id="i-datos-categóricos-o-nominales" class="section level5 unnumbered hasAnchor">
+<h5>(I) Datos categóricos (o nominales)<a href="conceptos-básicos.html#i-datos-categóricos-o-nominales" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>El dato pertenece a una categoría, por ejemplo, una sucursal, un color, una ciudad.</p>
+<p>Estos datos se caracterizan por lo siguiente:</p>
+<ul>
+<li><p><strong>Indican sentido de pertenencia</strong> a un grupo y por ello pueden responder a preguntas del tipo ¿Qué es esto?, ¿A qué clase o categoría pertenece? Por ejemplo, ¿Este ítem corresponde a una sucursal?</p></li>
+<li><p><strong>Permite comparar y agrupar cualitativamente</strong>. Por ejemplo, sucursales que están en una zona, en un país, en las que se habla inglés, etc.</p></li>
+<li><p><strong>No hay ordenamientos implícitos</strong>, pero con frecuencia tienen jerarquías (como país, estado o municipio). Por ejemplo, no hay razón para que la categoría verde vaya antes que la amarilla, o la Ciudad de Veracruz después que la de Guadalajara, a menos que se desee dar un orden alfabético, que no es una característica de la ciudad o del color.</p></li>
+<li><p><strong>No es posible realizar operaciones aritméticas entre ítems categóricos</strong>. No se puede realizar ninguna comparación cuantitativa entre ellos. Por ejemplo, en una sucursal se puede comparar su desempeño, su números de trabajadores… pero nunca, a la sucursal en sí misma. El concepto como tal, no permite efectuar una valoración.</p></li>
+</ul>
+</div>
+<div id="ii-datos-ordenados" class="section level5 unnumbered hasAnchor">
+<h5>(II) Datos ordenados<a href="conceptos-básicos.html#ii-datos-ordenados" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Tienen un orden o secuencia y por consiguiente se pueden establecer relaciones como mayor o igual, antes de, primero, etcétera. Los datos ordenados se subdividen en dos categorías:</p>
+<ul>
+<li><p><strong>Ordinales</strong>. Tienen un número finito (generalmente pequeño) de valores que pueden ser organizados siguiendo una secuencia, por ejemplo, talla chica, mediana o grande. Sus principales características son las siguientes:</p>
+<ul>
+<li><p>Tienen un <strong>ordenamiento que puede ser implícito o explícito</strong>. Por ejemplo, si mostramos los meses (o trimestres, como en el ejemplo anterior), no hay ninguna relación de magnitud entre los meses, pero conocemos su orden (enero va antes que abril y abril antes que junio).</p></li>
+<li><p>Permiten <strong>hacer comparaciones y relaciones</strong> tipo menor que/mayor o igual, etcétera. Por ejemplo, abril, mayo y junio conforman el segundo trimestre y este ocurre después que el primero, conformado por enero, febrero y marzo.</p></li>
+</ul></li>
+<li><p><strong>Cuantitativos</strong>. Se trata de los datos numéricos, con los que estamos muy familiarizados. Sus principales características son:</p>
+<ul>
+<li><p><strong>Son ordenables</strong>, por supuesto, pero su verdadera utilidad está en la <strong>magnitud del dato</strong>. La magnitud es el elemento que contiene el mensaje que queremos transmitir.</p></li>
+<li><p>Con base en la magnitud, <strong>se pueden hacer ordenamientos y comparaciones</strong>. Responden a preguntas tipo ¿Cuántos clientes se captaron? ¿En qué proporción creció la captación de clientes en el último trimestre? ¿Cuál es la sucursal que menos clientes captó?</p></li>
+<li><p>Son los únicos en los que se pueden realizar <strong>operaciones aritméticas</strong>.</p></li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ordcat"></span>
+<img src="figuras/ordcat.JPG" alt="*Ejemplo de datos categóricos y ordenados*" width="60%" />
+<p class="caption">
+Figura 2.2: <em>Ejemplo de datos categóricos y ordenados</em>
+</p>
+</div>
+<p>Cabe mencionar que como los datos ordinales tienen un número finito de valores, a veces es difícil distinguirlos de los datos categóricos y, de hecho, cuando el orden no es relevante, no es raro que se les tome como tales.</p>
+<p>Cuando se tiene claro con qué tipo de datos se está trabajando, se sabrá elegir con mucha más facilidad cuáles son los <strong>objetos visuales</strong> (los marcadores y los canales visuales) <strong>adecuados para poder representarlos</strong>.</p>
+</div>
+<div id="semántica" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Semántica<a href="conceptos-básicos.html#semántica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Los datos aislados no tienen sentido. <strong>La semántica</strong>, el contexto en el que se presentan los datos, es muy importante, sobre todo cuando se está haciendo análisis exploratorio y se quiere entender qué nos están diciendo los datos.</p>
+<p>Si se localizan datos aislados la información revelada es nula. Para ser de utilidad tienen que estar constreñidos en un contexto, y ser analizados dentro de este. Esa información, a su vez, se ha de alimentar con más contexto que se transforma en conocimiento, lo que convertirá a la persona en experta en la comprensión de la información.</p>
+<p>Se llamará semántica a ese <strong>contexto de los datos</strong>. Es decir, es la información acerca de lo que están representando estos datos.</p>
+<p>Ejemplo
+Si se encuentra con la siguiente tabla, no podrá conseguir con certeza ninguna información ya que no se tiene contexto de lo que se está mostrando. Se puede suponer que la primera columna indica el nombre de una persona, pero ¿qué significará la segunda columna, el número de personas con ese nombre, la edad de la persona, su número favorito? ¿Y la cuarta, será una fruta, o un color, o una contraseña? Sin embargo, con la siguiente imagen, ya se puede iniciar el proceso de análisis y extracción de información:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tabnocon"></span>
+<img src="figuras/tab1.jpg" alt="*Ejemplo de una tabla sin contexto*" width="50%" />
+<p class="caption">
+Figura 2.3: <em>Ejemplo de una tabla sin contexto</em>
+</p>
+</div>
+<p>Sin embargo, con sólo añadir un poco de contexto a través de los nombres de las columnas, ya se puede iniciar el proceso de análisis y extracción de información:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tab2"></span>
+<img src="figuras/tab2.jpg" alt="*Ejemplo de una tabla con contexto*" width="50%" />
+<p class="caption">
+Figura 2.4: <em>Ejemplo de una tabla con contexto</em>
+</p>
+</div>
+<p>Se puede observar que el registro (un renglón) tiene cuatro variables (cuatro columnas): nombre, edad, tamaño de camiseta y fruta favorita. Los nombres de las columnas dan un contexto, pero en sí mismos no son datos. Son datos de los datos o <strong>metadatos</strong>.</p>
+<p>Con frecuencia nos interesa más información adicional, más metadatos, sobre todo cuando queremos generar narrativas. Por ejemplo, resulta muy importante tener documentación sobre cómo fueron sintetizados, recabados, y analizados los datos. <strong>Todo lo que permita comprender mejor los datos, es una buena práctica</strong>.</p>
+</div>
+<div id="conjunto-de-datos" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Conjunto de datos<a href="conceptos-básicos.html#conjunto-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En la mayoría de las representaciones gráficas que se verán en este curso se suelen presentar los datos en un formato de tabla y, por ello, a ese tipo de gráficas se les llama <strong>gráficas tabulares</strong>. Aunque estos no son los únicos conjuntos de datos que se verán en el curso, también se estudiarán otros dos conjuntos de datos: <strong>redes y datos espaciales</strong>.</p>
+<div id="conjunto-de-datos-tabulares" class="section level4 unnumbered hasAnchor">
+<h4>Conjunto de datos tabulares<a href="conceptos-básicos.html#conjunto-de-datos-tabulares" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Ya conocemos sus componentes esenciales (ejes vertical y horizontal, elementos gráficos e información adicional); ahora les presentaremos las convenciones que seguirán para expresar la representación tabular de donde provienen los datos:</p>
+<ul>
+<li><p><strong>ITEM</strong> Entidad individual, discreta, que contiene propiedades relevantes para sus narrativas. Un ítem es una representación, por ejemplo, de un alumno, un paciente, un automóvil o una ciudad.</p></li>
+<li><p><strong>VARIABLE/ATRIBUTO/DIMENSIÓN</strong> Se trata de las propiedades medibles y registradas de un ítem, que, por lo tanto, tienen un valor que se utilizará para generar las gráficas y, con base en ellas, las narrativas.</p></li>
+</ul>
+<p>En la representación tabular de los datos, típicamente los ítems se ordenan por filas, y las variables o atributos, por columnas. Entonces, los valores son precisamente los contenidos de las celdas. Una de esas variables debe ser una llave, es decir, un identificador único que permite distinguir los ítems entre sí.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:reptab"></span>
+<img src="figuras/reptab.JPG" alt="*Ítems y atributos en una representación tabular*" width="60%" />
+<p class="caption">
+Figura 2.5: <em>Ítems y atributos en una representación tabular</em>
+</p>
+</div>
+<p>El proceso de representación gráfica consiste en <strong>extraer la información de esas celdas, y mapearla</strong> hacia objetos gráficos que se representarán en las coordenadas bidimensionales del espacio donde se van a generar las visualizaciones.</p>
+<p>Puede haber tablas más complejas (tablas multidimensionales), y en ese caso, hay que recurrir a más de una llave para poder extraer la información de las celdas y entonces mapear las representaciones gráficas.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:multidim"></span>
+<img src="figuras/multidim.JPG" alt="*Representación tabular con tres dimensiones. Se requiere de dos llaves*" width="60%" />
+<p class="caption">
+Figura 2.6: <em>Representación tabular con tres dimensiones. Se requiere de dos llaves</em>
+</p>
+</div>
+</div>
+<div id="conjunto-de-datos-de-redes" class="section level4 unnumbered hasAnchor">
+<h4>Conjunto de datos de redes<a href="conceptos-básicos.html#conjunto-de-datos-de-redes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los conjuntos de datos de redes permiten <strong>identificar relaciones entre ítems</strong>. Para poder representar adecuadamente esas relaciones, se tendrá que recurrir a otro tipo de representaciones visuales. Las que presentaremos en el curso, son dos: los <strong>mapas de árbol</strong> (treemap) en donde la posición muestra las relaciones jerárquicas entre los ítems y el área su magnitud; y los <strong>grafos</strong> en los que los nodos representan los ítems y los enlaces, las relaciones entre esos ítems.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:datosredes"></span>
+<img src="figuras/datosredes.JPG" alt="*Representación de datos de redes*" width="60%" />
+<p class="caption">
+Figura 2.7: <em>Representación de datos de redes</em>
+</p>
+</div>
+</div>
+<div id="conjuntos-de-datos-espaciales" class="section level4 unnumbered hasAnchor">
+<h4>Conjuntos de datos espaciales<a href="conceptos-básicos.html#conjuntos-de-datos-espaciales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para los conjuntos de datos espaciales, se mostrarán <strong>representaciones geoespaciales en las que los atributos de los ítems pueden asociarse a zonas geográficas específicas</strong> y, por tanto, tiene sentido representarlos dentro de o junto con una cartografía de esas regiones.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:datosgeo"></span>
+<img src="figuras/datosgeo.JPG" alt="*Representación de datos geo-espaciales*" width="60%" />
+<p class="caption">
+Figura 2.8: <em>Representación de datos geo-espaciales</em>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="marcadores-y-canales-visuales" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Marcadores y canales visuales<a href="conceptos-básicos.html#marcadores-y-canales-visuales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La gráfica no es más que la representación de un objeto geométrico básico y esos objetos, es a lo que nosotros llamamos <strong>marcadores</strong>. Por el momento, en el curso se trabajará con <strong>puntos, barras y líneas</strong> (para algunos autores, las barras son, simplemente, una forma de línea).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:marccan"></span>
+<img src="figuras/marccan.JPG" alt="*Ejemplos de marcadores: barra, punto y línea*" width="50%" />
+<p class="caption">
+Figura 2.9: <em>Ejemplos de marcadores: barra, punto y línea</em>
+</p>
+</div>
+<p>También pueden utilizar como elementos geométricos las áreas y los volúmenes, pero estos últimos nunca los vamos a utilizar. Y las áreas, las vamos a usar solo cuando se haga mención a gráficas geoespaciales.</p>
+<div style="color: blue;">
+<p>Los marcadores son, los elementos geométricos básicos que se presentan en la gráfica, y las propiedades de estos elementos geométricos son las que se alterarán para poder mapear los datos hacia la representación gráfica, van a ser denominados canales visuales.</p>
+</div>
+<div id="canales-visuales" class="section level4 hasAnchor" number="2.4.0.1">
+<h4><span class="header-section-number">2.4.0.1</span> Canales visuales<a href="conceptos-básicos.html#canales-visuales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los canales visuales, también llamados canales retinales o dimensiones visuales, son las <strong>propiedades de los marcadores que controlan su apariencia</strong>, como la posición, longitud, anchura, tonalidad u orientación del elemento gráfico.</p>
+<p>Algunas de esas propiedades son más adecuadas para representar información categórica, mientras que otras son más adecuadas para representar información cuantitativa.
+Además, las propiedades varían en el tipo y cantidad de información que se puede entregar al sistema perceptual.</p>
+<p>Muchos de los problemas a los que nos enfrentamos al crear representaciones gráficas es que no sabemos escoger el canal adecuado para el tipo de datos/relación que se quiere transmitir. Es fundamental, para poder generar representaciones visuales eficientes, claras y sin dificultad de interpretación, conocer estos canales. Esto se debe a que <strong>darán el conocimiento para ser críticos crónicos de las gráficas que se están analizando</strong>.</p>
+</div>
+<div id="ejemplos-de-codificación-visual" class="section level4 unnumbered hasAnchor">
+<h4>Ejemplos de codificación visual<a href="conceptos-básicos.html#ejemplos-de-codificación-visual" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Con el fin de familiarizanos con esta nueva nomenclatura, a continuación se muestran algunos ejemplos de codificación visual resaltando el tipo de marcador y de canal visual:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ejmcan"></span>
+<img src="figuras/ejmcan.JPG" alt="*Ejemplos de marcadores y canales visuales*" width="80%" />
+<p class="caption">
+Figura 2.10: <em>Ejemplos de marcadores y canales visuales</em>
+</p>
+</div>
+</div>
+<div id="efectividad-y-expresividad-de-los-canales-visuales" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Efectividad y expresividad de los canales visuales<a href="conceptos-básicos.html#efectividad-y-expresividad-de-los-canales-visuales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Como se ha mencionado, distintos canales visuales son más adecuados para representar ciertos tipos de datos y son asimilados de manera diferente por el sistema perceptual humano. Por ello, al momento de elegir los canales visuales para representar los datos, es importante tener en cuenta dos tipos de métricas:</p>
+<p><strong>EXPRESIVIDAD</strong> Se debe tratar de alinear el tipo de canal con el tipo de dato. Al final del día lo importante es saber elegir el canal visual más apropiado, con base en la información que se desea representar.
+La codificación seleccionada debe permitir mostrar toda (y solamente) la información de los atributos relevantes en el conjunto de datos. Por ejemplo, si se están representando datos ordenados, su posición en el eje debe sugerir el orden que tienen esos datos (como se desplegaron los trimestres en la gráfica de nuestro ejemplo). Si, por el contrario, los datos no están ordenados, su representación no debe insinuar un orden, aunque sí tal vez una categoría.</p>
+<p><strong>EFECTIVIDAD</strong> Tras estudiar las características del sistema perceptual humano, algunos canales son, simplemente, mucho mejores que otros para transmitir una información. Por ejemplo, algunos llaman más la atención o permiten un procesamiento de la información del cerebro casi inmediatos.</p>
+<div id="efectividad-de-los-canales" class="section level4 unnumbered hasAnchor">
+<h4>Efectividad de los canales<a href="conceptos-básicos.html#efectividad-de-los-canales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>El sistema perceptual opera con juicios relativos</strong>, le cuesta mucho trabajo interpretar valores absolutos. Es decir, no es útil, por ejemplo, en la medición exacta de la altura de una barra, pero si lo es para realizar comparaciones entre las magnitudes de varias barras.</p>
+<p>Por este tipo de límites, al querer identificar qué canal visual es más apropiado para transmitir un mensaje, se deben tomar en cuenta los siguientes elementos:</p>
+<ul>
+<li><strong>Exactitud</strong> Qué tan precisamente pueden identificar e interpretar la diferencia entre ítems codificados.</li>
+<li><strong>Discriminación</strong>. Cuántos pasos únicos pueden percibir</li>
+<li><strong>Separabilidad</strong>. Qué tanto su habilidad para utilizar un canal es modificada por otros canales.</li>
+<li><strong>Resaltado</strong>. Cómo pueden resaltar algo utilizando cierto canal.</li>
+</ul>
+<p>La figura <a href="conceptos-básicos.html#fig:record">2.11</a> muestra una escala empírica sobre la efectividad de distintos canales visuales al codificar atributos ordenados. Lo que se busca es tratar de identificar cómo los canales visuales son más o menos apropiados para responder a preguntas como “Qué tan fácil es discernir si un objeto A es mayor, menor o igual a un objeto B y de qué orden es la diferencia”.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:record"></span>
+<img src="figuras/record.jpg" alt="*Escala empírica sobre la efectividad de canales visuales para atributos ordenados*" width="50%" />
+<p class="caption">
+Figura 2.11: <em>Escala empírica sobre la efectividad de canales visuales para atributos ordenados</em>
+</p>
+</div>
+<p>Por su parte, la figura <a href="conceptos-básicos.html#fig:reccat">2.12</a> muestra una escala similar para atributos categóricos cuando se busca responder a preguntas como “Qué tan fácil es discernir qué canal representa qué objeto o grupo de objetos”.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:reccat"></span>
+<img src="figuras/reccat.jpg" alt="*Escala empirica sobre la efectividad de canales visuales para atributos categóricos*" width="50%" />
+<p class="caption">
+Figura 2.12: <em>Escala empirica sobre la efectividad de canales visuales para atributos categóricos</em>
+</p>
+</div>
+<p>Se observa que la posición es la opción más efectiva tanto para atributos ordenados como para categóricos.</p>
+<p>Con relación a la exactitud, el sicólogo Stanley Stevens realizó una serie de experimentos y encontró lo que se conoce como la “Ley de Potencia Psico-Física de Stevens” o Ley de Potenciación.</p>
+<p>Se trata de una relación matemática que describe cómo percibimos la intensidad de los estímulos sensoriales en función de la intensidad real de esos estímulos. Establece que la percepción sensorial de un estímulo no aumenta en línea recta con el aumento en la intensidad del estímulo físico. En cambio, la relación entre la percepción y la intensidad del estímulo sigue una curva de potencia como se muestra en la figura <a href="conceptos-básicos.html#fig:power">2.13</a>, lo que significa que los cambios en la percepción pueden ser desproporcionadamente mayores o menores que los cambios correspondientes en la intensidad física.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:power"></span>
+<img src="figuras/power.jpg" alt="*Ley de Potencia Psico-Física de Stevens*" width="50%" />
+<p class="caption">
+Figura 2.13: <em>Ley de Potencia Psico-Física de Stevens</em>
+</p>
+</div>
+<p>La longitud es bastante exacta; los otros canales visuales amplifican o comprimen la sensación.</p>
+
+</div>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Few2012" class="csl-entry">
+Few, Stephen. 2001. <em>Show Me the Numbers</em>. Analytic Press.
+</div>
+<div id="ref-Munzner2014" class="csl-entry">
+Munzner, Tamara. 2014. <em>Visualization Analysis and Design</em>. CRC Press.
+</div>
+<div id="ref-Ware2008" class="csl-entry">
+Ware, Colin. 2008. <em>Visual Thinking for Design</em>. Morgan Kaufman.
+</div>
+<div id="ref-Ware2013" class="csl-entry">
+———. 2013. <em>Information Visualization. Perception for Design</em>. 3td ed. Morgan Kaufman.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mejores-prácticas-y-recomendaciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-VizIntro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

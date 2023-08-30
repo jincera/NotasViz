@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Tipos de gráficos básicos | Visualización de Información</title>
+  <meta name="description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Tipos de gráficos básicos | Visualización de Información" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Tipos de gráficos básicos | Visualización de Información" />
+  
+  <meta name="twitter:description" content="Notas para los cursos de Narrativas y Visualización de Información." />
+  
+
+<meta name="author" content="José Incera" />
+
+
+<meta name="date" content="2023-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="mejores-prácticas-y-recomendaciones.html"/>
+<link rel="next" href="redes-jerárquicas-y-redes-de-vínculos.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Narrativas y Visualización. Notas de Curso</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Presentación</a></li>
+<li class="chapter" data-level="2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html"><i class="fa fa-check"></i><b>2</b> Conceptos básicos</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#la-visualización-de-información"><i class="fa fa-check"></i><b>2.1</b> La visualización de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#por-qué-utilizar-visualización"><i class="fa fa-check"></i>¿Por qué utilizar visualización?</a></li>
+<li class="chapter" data-level="2.1.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#por-qué-visualizar"><i class="fa fa-check"></i><b>2.1.1</b> ¿Por qué visualizar?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#la-percepción-visual"><i class="fa fa-check"></i><b>2.1.2</b> La percepción visual</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#qué-es-una-gráfica-por-qué-utilizar-gráficas-para-representar-información"><i class="fa fa-check"></i><b>2.2</b> ¿Qué es una gráfica? ¿Por qué utilizar gráficas para representar información?</a></li>
+<li class="chapter" data-level="2.3" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#tipos-de-datos"><i class="fa fa-check"></i><b>2.3</b> Tipos de datos</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#semántica"><i class="fa fa-check"></i><b>2.3.1</b> Semántica</a></li>
+<li class="chapter" data-level="2.3.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#conjunto-de-datos"><i class="fa fa-check"></i><b>2.3.2</b> Conjunto de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#marcadores-y-canales-visuales"><i class="fa fa-check"></i><b>2.4</b> Marcadores y canales visuales</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html#efectividad-y-expresividad-de-los-canales-visuales"><i class="fa fa-check"></i><b>2.4.1</b> Efectividad y expresividad de los canales visuales</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html"><i class="fa fa-check"></i><b>3</b> Mejores prácticas y recomendaciones</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#el-color"><i class="fa fa-check"></i><b>3.1</b> El color</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#propiedades-del-color"><i class="fa fa-check"></i><b>3.1.1</b> Propiedades del color</a></li>
+<li class="chapter" data-level="3.1.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#factores-a-tomar-en-cuenta"><i class="fa fa-check"></i><b>3.1.2</b> Factores a tomar en cuenta</a></li>
+<li class="chapter" data-level="3.1.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#empleo-del-color-como-canal-visual"><i class="fa fa-check"></i><b>3.1.3</b> Empleo del color como canal visual</a></li>
+<li class="chapter" data-level="3.1.4" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#tipos-de-paletas-de-colores"><i class="fa fa-check"></i><b>3.1.4</b> Tipos de paletas de colores</a></li>
+<li class="chapter" data-level="3.1.5" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#no-abusar-del-color"><i class="fa fa-check"></i><b>3.1.5</b> No abusar del color</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#reordenamiento"><i class="fa fa-check"></i><b>3.2</b> Reordenamiento</a></li>
+<li class="chapter" data-level="3.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#etiquetado"><i class="fa fa-check"></i><b>3.3</b> Etiquetado</a></li>
+<li class="chapter" data-level="3.4" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#gráficas-en-3-dimensiones"><i class="fa fa-check"></i><b>3.4</b> Gráficas en 3 dimensiones</a></li>
+<li class="chapter" data-level="3.5" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#malas-prácticas-a-evitar"><i class="fa fa-check"></i><b>3.5</b> Malas prácticas a evitar</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#sugerir-tendencias-donde-no-las-hay"><i class="fa fa-check"></i><b>3.5.1</b> Sugerir tendencias donde no las hay</a></li>
+<li class="chapter" data-level="3.5.2" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#origen-de-los-ejes"><i class="fa fa-check"></i><b>3.5.2</b> Origen de los ejes</a></li>
+<li class="chapter" data-level="3.5.3" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#gráficas-de-pastel"><i class="fa fa-check"></i><b>3.5.3</b> Gráficas de pastel</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="mejores-prácticas-y-recomendaciones.html"><a href="mejores-prácticas-y-recomendaciones.html#comentarios-finales-y-máximas-sobre-la-conversación"><i class="fa fa-check"></i><b>3.6</b> Comentarios finales y máximas sobre la conversación</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html"><i class="fa fa-check"></i><b>4</b> Tipos de gráficos básicos</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#introducción"><i class="fa fa-check"></i><b>4.1</b> Introducción</a></li>
+<li class="chapter" data-level="4.2" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#representación-de-los-datos-tabulares"><i class="fa fa-check"></i><b>4.2</b> Representación de los datos tabulares</a></li>
+<li class="chapter" data-level="4.3" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#visualización-de-datos-tabulares"><i class="fa fa-check"></i><b>4.3</b> Visualización de datos tabulares</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#gráficas-de-barras-puntos-y-líneas-pastel-mapas-de-calor-y-de-dispersión"><i class="fa fa-check"></i><b>4.3.1</b> Gráficas de barras, puntos y líneas, pastel, mapas de calor y de dispersión</a></li>
+<li class="chapter" data-level="4.3.2" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#partes-de-un-todo"><i class="fa fa-check"></i><b>4.3.2</b> Partes de un todo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="tipos-de-gráficos-básicos.html"><a href="tipos-de-gráficos-básicos.html#gráficas-para-sumarización-de-datos"><i class="fa fa-check"></i><b>4.3.3</b> Gráficas para sumarización de datos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html"><i class="fa fa-check"></i><b>5</b> Redes jerárquicas y redes de vínculos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#relaciones-jerárquicas"><i class="fa fa-check"></i><b>5.1</b> Relaciones jerárquicas</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#mapas-de-árbol"><i class="fa fa-check"></i><b>5.1.1</b> Mapas de árbol</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#grafos"><i class="fa fa-check"></i><b>5.2</b> Grafos</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#cómo-se-forman-los-modelos-de-redes"><i class="fa fa-check"></i><b>5.2.1</b> Cómo se forman los modelos de redes</a></li>
+<li class="chapter" data-level="5.2.2" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#modelos-de-redes"><i class="fa fa-check"></i><b>5.2.2</b> Modelos de redes</a></li>
+<li class="chapter" data-level="5.2.3" data-path="redes-jerárquicas-y-redes-de-vínculos.html"><a href="redes-jerárquicas-y-redes-de-vínculos.html#propiedades-de-las-redes"><i class="fa fa-check"></i><b>5.2.3</b> Propiedades de las redes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html"><i class="fa fa-check"></i><b>6</b> Gráficas geoespaciales</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#proyecciones"><i class="fa fa-check"></i><b>6.1</b> Proyecciones</a></li>
+<li class="chapter" data-level="6.2" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#mapas-de-coropletas"><i class="fa fa-check"></i><b>6.2</b> Mapas de coropletas</a>
+<ul>
+<li class="chapter" data-level="" data-path="gráficas-geoespaciales.html"><a href="gráficas-geoespaciales.html#mapas-geoespaciales-en-excel"><i class="fa fa-check"></i>Mapas geoespaciales en Excel</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Visualización de Información</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tipos-de-gráficos-básicos" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Tipos de gráficos básicos<a href="tipos-de-gráficos-básicos.html#tipos-de-gráficos-básicos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En el primer capítulo, nos familiarizamos con los conceptos de los elementos esenciales que conforman una gráfica; en el segundo, hemos repasado malas y buenas prácticas al diseñar una gráfica. <em>Ahora es momento de aprender a elegir qué tipo de gráfica utilizar, en función de los tipos de datos que vamos a representar visualmente, y del mensaje que deseamos comunicar</em>.</p>
+<p>Nos enfocaremos exclusivamente en las gráficas para representar lo que llamamos <strong>datos tabulares</strong>, es decir, datos que típicamente están expresados en un formato tabular en dos o más dimensiones.
+Identificaremos cuáles son las gráficas más apropiadas si lo que buscamos es comparar magnitudes; analizar tendencias y hacer proyecciones; identificar en qué proporción distintos elementos contribuyen a la totalidad de los datos observados; identificar si existe una relación entre dos conjuntos de datos; o presentar una síntesis estadística de nuestros datos, entre otros.</p>
+<p>Este capítulo será esencial para construir narrativas claras y eficaces.</p>
+<div id="introducción" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Introducción<a href="tipos-de-gráficos-básicos.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Cuando queremos contar una historia con gráficas, realmente lo que buscamos es hacer visible la relación entre los valores de nuestros datos. La forma en la que vamos a representar esta relación será a través de los marcadores de los que disponemos: los puntos, las líneas, las barras y las áreas, y los diferentes canales visuales para poder modificar las características de esos marcadores.</p>
+<p>En este capítulo analizaremos los tipos de gráficas más populares para visualizar los llamados datos tabulares, es decir, datos que típicamente se extraen de una tabla bidimensional o multidimensional. También presentaremos algunas gráficas que muestran propiedades estadísticas de nuestros datos y que son muy comunes cuando es necesario llevar a cabo un análisis exploratorio de nuestra información.</p>
+</div>
+<div id="representación-de-los-datos-tabulares" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Representación de los datos tabulares<a href="tipos-de-gráficos-básicos.html#representación-de-los-datos-tabulares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recordemos el concepto de datos tabulares que presentamos en el primer capítulo: son datos que suelen presentarse en un formato de tabla en donde se encuentra la información que deseamos representar gráficamente. Por ejemplo, la siguiente tabla muestra datos (hipotéticos) de alumnos inscritos en un plantel académico:</p>
+<table>
+<thead>
+<tr class="header">
+<th>No. Matrícula</th>
+<th>Nombre</th>
+<th>Semestre actual</th>
+<th>Promedio general</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>123456</td>
+<td>Laura García</td>
+<td>6</td>
+<td>9.3</td>
+</tr>
+<tr class="even">
+<td>451238</td>
+<td>Marina Fernández</td>
+<td>4</td>
+<td>8.7</td>
+</tr>
+<tr class="odd">
+<td>334455</td>
+<td>Javier Blanco</td>
+<td>7</td>
+<td>8.4</td>
+</tr>
+</tbody>
+</table>
+<p>Cada renglón contiene la información de un ítem y cada columna, una variable o atributo de esos ítems. Las celdas en la tabla contienen los valores de interés para construir la narrativa a través de nuestras gráficas. Podríamos graficar, por ejemplo, cuántos alumnos están matriculados en cada semestre; si existe una relación entre el número de semestre y el promedio general; cómo tienden a variar los promedios académicos a lo largo del ciclo de vida estudiantil, etcétera.</p>
+<p>Para acceder a los valores de la tabla, requerimos de una <strong>“llave”</strong>, un atributo categórico que nos permite seleccionar los ítems apropiados para extraer de ellos los valores de interés (por ejemplo, aquellos ítems donde el semestre actual es 6, y tomar el promedio académico). También aprendimos en el primer capítulo, que podemos tener tablas más complejas (tablas multidimensionales) en las que para acceder a los valores de interés se requiere de varias llaves.</p>
+<p>Con base en la combinación de llaves y valores de los datos tabulares que deseamos visualizar, es que podremos elegir el tipo de gráfica que conviene utilizar, como lo mostraremos en la siguiente sección, en la que introducimos las características de las principales gráficas tabulares.</p>
+</div>
+<div id="visualización-de-datos-tabulares" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Visualización de datos tabulares<a href="tipos-de-gráficos-básicos.html#visualización-de-datos-tabulares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gráficas-de-barras-puntos-y-líneas-pastel-mapas-de-calor-y-de-dispersión" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Gráficas de barras, puntos y líneas, pastel, mapas de calor y de dispersión<a href="tipos-de-gráficos-básicos.html#gráficas-de-barras-puntos-y-líneas-pastel-mapas-de-calor-y-de-dispersión" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gráficas-de-barras" class="section level4 unnumbered hasAnchor">
+<h4>Gráficas de barras<a href="tipos-de-gráficos-básicos.html#gráficas-de-barras" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Ya nos hemos encontrado con varios ejemplos de gráficas de barras a lo largo de este curso. En general, estamos codificando una variable categórica (la llave) y una cuantitativa (el valor). Cada instancia de la variable categórica corresponde a una barra y ocupa una posición específica en la gráfica. La longitud de la barra es proporcional a la magnitud del atributo cuantitativo correspondiente. En el ejemplo de la figura <a href="tipos-de-gráficos-básicos.html#fig:barra">4.1</a>, la variable categórica es una sucursal bancaria y la cuantitativa, el número de clientes nuevos que la sucursal captó en el trimestre de estudio.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barra"></span>
+<img src="figuras/barra.jpg" alt="*Nuevos clientes en el último trimestre. Fuente: Elaboración propia*" width="60%" />
+<p class="caption">
+Figura 4.1: <em>Nuevos clientes en el último trimestre. Fuente: Elaboración propia</em>
+</p>
+</div>
+<p>En ocasiones es más conveniente desplegar las barras de manera horizontal, como se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:barrah">4.2</a>. Cuando sea necesario distinguir entre los dos tipos de gráfica, es común que a las de barras horizontales se les denomine <strong>gráficas de barras, y a las de barras verticales, gráficas de columnas</strong>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barrah"></span>
+<img src="figuras/barrah.jpg" alt="*Pentración de banda ancha en varios países a 2008. Fuente: Elaboración propia con datos de OCDE e UIT*" width="60%" />
+<p class="caption">
+Figura 4.2: <em>Pentración de banda ancha en varios países a 2008. Fuente: Elaboración propia con datos de OCDE e UIT</em>
+</p>
+</div>
+<p>Si tenemos pocos valores de la variable categórica (pocos ítems) utilizaríamos una gráfica de columnas y cuando tenemos más (no demasiados), es conveniente emplear las gráficas de barras. Esto se debe a que, con las barras horizontales se ahorra más espacio (la barra puede crecer tanto como la longitud de un renglón sin que el espacio se penalice). Además, por lo menos en las culturas occidentales, estamos mucho más familiarizados con interpretar información que fluye de arriba hacia abajo y de izquierda a derecha.</p>
+<p>La tarea principal de las gráficas de barras es poder <strong>hacer comparaciones entre las magnitudes de los datos</strong> representados, aprovechando la excelente capacidad de nuestro sistema de percepción visual para distinguir hasta pequeñas variaciones en la longitud de los marcadores.</p>
+<p>Las gráficas de barras que hemos mencionado hasta ahora son ejemplos de <strong>gráficas de barras simples</strong>, en las que tenemos una sola variable categórica. Podemos agregar una segunda variable categórica y tendremos representaciones visuales un poco más complejas: las <strong>gráficas de barras agrupadas</strong> y las <strong>gráficas de barras apiladas</strong>.</p>
+<div id="gráficas-de-barras-agrupadas" class="section level5 unnumbered hasAnchor">
+<h5>Gráficas de barras agrupadas<a href="tipos-de-gráficos-básicos.html#gráficas-de-barras-agrupadas" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>La figura <a href="tipos-de-gráficos-básicos.html#fig:agrupada">4.3</a> muestra una gráfica de barras agrupadas. En este ejemplo, la primer categoría o llave primaria son los años en los que se hace el estudio, y la segunda categoría, la llave secundaria, son los diferentes rangos de edad analizados. La variable cuantitativa es el número de usuarios de cada una de las categorías (en millones).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:agrupada"></span>
+<img src="figuras/agrupada.jpg" alt="*Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.*" width="60%" />
+<p class="caption">
+Figura 4.3: <em>Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.</em>
+</p>
+</div>
+<p>Para cada valor de la llave primaria (para cada año), podemos hacer fácilmente una comparación de las magnitudes de la llave secundaria (los rangos de edad). Por ejemplo, resulta muy sencillo responder a la pregunta “¿Cuál fue el rango de edad que menos utilizaba un smartphone en 2015?”</p>
+<p>También podemos hacer comparaciones entre categorías y responder a preguntas como “¿En todos los años estudiados, el rango de usuarios que menos utilizaba smartphones fueron las personas mayores a 55 años?” “¿Qué rango de edad en 2016 tenía un número de usuarios similar a los usuarios menores de 24 años en 2014?”</p>
+<p>Finalmente, porque la categoría primaria está ordenada, podemos distinguir, con un poco más de esfuerzo, la evolución de cada uno de los grupos en la categoría secundaria (los rangos de edad) a lo largo del tiempo. Se observa que en cada uno de los grupos de edad el número de usuarios ha aumentado, aunque no nos es posible decir si todos han aumentado a la misma tasa. Tampoco podemos identificar con facilidad de qué manera cada grupo de edad contribuye a la totalidad de usuarios en un año determinado. Para responder ese tipo de preguntas, utilizamos otro tipo de gráficas.</p>
+</div>
+<div id="gráficas-de-barras-apiladas" class="section level5 unnumbered hasAnchor">
+<h5>Gráficas de barras apiladas<a href="tipos-de-gráficos-básicos.html#gráficas-de-barras-apiladas" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Si lo que nos interesa en la narrativa es mostrar tanto los valores totales (la magnitud) de una determinada categoría así como la manera en que los componentes de una segunda categoría contribuyeron a esos valores totales (se le llama a este tipo de estudios, <strong>partes de un todo</strong>), se utilizan las gráficas de barras apiladas como la que se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:apilada">4.4</a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:apilada"></span>
+<img src="figuras/apiladas.jpg" alt="*Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.*" width="60%" />
+<p class="caption">
+Figura 4.4: <em>Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.</em>
+</p>
+</div>
+<p>En nuestro ejemplo, podemos observar el número total de usuarios de smartphone (en millones de personas) por cada año y cómo los distintos rangos de edad contribuyeron a esos valores totales. Por ejemplo, observamos que en 2016 hubo 208 millones de usuarios y de éstos, 69 millones corresponden al rango de edad de 35 a 55 años.</p>
+<p>Obtuvimos estos datos a partir de las etiquetas que enriquecen la gráfica y que ayudan a simplificar el mensaje que queremos transmitir. De hecho, porque se están añadiendo las etiquetas, ya no es necesario poner el eje de ordenadas en la gráfica.</p>
+<p>Podemos suponer que el marcador de barra la gráfica de barras apiladas está conformado por una serie de barras superpuestas. Se trata, entonces, de un objeto compuesto por varios marcadores. A estos objetos compuestos se les llama <strong>glifo</strong>.</p>
+<p>Merece la pena recordar que si la gráfica no tuviera las etiquetas de datos, sólo podríamos hacer una comparación objetiva de magnitudes sobre el primer elemento de la variable categórica de edad (el rango de usuarios menores a 24 años) pues es el único grupo que está alineado al origen. Para compensar en cierta medida esta limitante de nuestro sistema perceptual, se suele acompañar a las gráficas apiladas de líneas de guía, como las líneas punteadas en la imagen, que nos ayudan a distinguir si las magnitudes de los elementos en la categoría secundaria aumentaron o disminuyeron con los cambios de valores en la categoría primaria.</p>
+</div>
+</div>
+<div id="gráficas-de-líneas-y-de-puntos" class="section level4 unnumbered hasAnchor">
+<h4>Gráficas de líneas y de puntos<a href="tipos-de-gráficos-básicos.html#gráficas-de-líneas-y-de-puntos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de líneas y de puntos se utilizan para mostrar la relación entre dos <strong>variables ordinales</strong>. Típicamente una de ellas es continua y su magnitud suele proyectarse como una posición en el eje Y. La otra variable también puede ser continua o discreta, pero con valores a intervalos constantes, por ejemplo, los meses en el año. En estos casos, el tipo de gráfica recomendable es la <strong>gráfica de líneas</strong>. Si la segunda variable es categórica ordenada (por ejemplo, el número de cilindros en un motor de combustión interna), se recomienda utilizar la <strong>gráfica de puntos</strong>.</p>
+<p>Como recordaremos del capítulo anterior, si la segunda variable es categórica pero no ordenada, debemos utilizar una gráfica de barras, ya que una gráfica de líneas o de puntos sugeriría una tendencia que no existe en este caso.</p>
+<p>Las gráficas de líneas y de puntos son muy útiles para identificar tendencias y analizar periodicidades y cambios en el tiempo (si la segunda variable es temporal). También permiten detectar valores atípicos (<em>outliers</em>).</p>
+<p>A este tipo de gráficas se les suele aplicar alguna técnica de extrapolación, como una regresión lineal, para enfatizar la tendencia de los datos y con base en ella, poder hacer predicciones hacia adelante.</p>
+<p>En la figura <a href="tipos-de-gráficos-básicos.html#fig:extrapola">4.5</a>, la línea azul muestra penetración de banda ancha en México a partir de valores tomados en cortes anuales. La línea roja punteada fue generada con base en una regresión lineal y muestra la tendencia de penetración extrapolada un periodo anterior (2009) y uno posterior (2022).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:extrapola"></span>
+<img src="figuras/extrapola.jpg" alt="*Penetración de banda ancha en México (por cada 100 hab). Fuente: elaboración propia con datos de OCDE.*" width="60%" />
+<p class="caption">
+Figura 4.5: <em>Penetración de banda ancha en México (por cada 100 hab). Fuente: elaboración propia con datos de OCDE.</em>
+</p>
+</div>
+<p>Por supuesto, en estas gráficas también se puede añadir una segunda variable categórica para poder analizar y comparar los valores entre los elementos de la categoría de manera rápida y sencilla. Por ejemplo, en la figura <a href="tipos-de-gráficos-básicos.html#fig:extrapola2">4.6</a> se muestra la penetración de banda ancha de distintos países en el periodo de 2009 a 2021.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:extrapola2"></span>
+<img src="figuras/extrapola2.jpg" alt="*Penetración de banda ancha (por cada 100 hab). Fuente: elaboración propia con datos de OCDE.*" width="60%" />
+<p class="caption">
+Figura 4.6: <em>Penetración de banda ancha (por cada 100 hab). Fuente: elaboración propia con datos de OCDE.</em>
+</p>
+</div>
+</div>
+<div id="gráficas-de-mapas-de-calor-heatmaps" class="section level4 unnumbered hasAnchor">
+<h4>Gráficas de mapas de calor (<em>heatmaps</em>)<a href="tipos-de-gráficos-básicos.html#gráficas-de-mapas-de-calor-heatmaps" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de mapas de calor representan dos variables categóricas y una cuantitativa en una matriz bidimensional. Los marcadores son los rectángulos de la matriz y el canal visual, proporcional a la magnitud de la variable cuantitativa, es el color (su tonalidad, saturación, brillantez o una combinación de ellos), como se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:heatmap">4.7</a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:heatmap"></span>
+<img src="figuras/heatmap.jpg" alt="*Consumo para ciertos models y características de automóviles. Fuente: Elaboración propia con datos del dataset mpg de R.*" width="60%" />
+<p class="caption">
+Figura 4.7: <em>Consumo para ciertos models y características de automóviles. Fuente: Elaboración propia con datos del dataset mpg de R.</em>
+</p>
+</div>
+<p>Las gráficas de mapas de calor permiten visualizar grandes cantidades de datos de una manera compacta y fácil de entender. Son particularmente útiles en el análisis de datos complejos y en la identificación de patrones y tendencias. También permiten la detección de valores atípicos en los datos, los cuales se muestran con colores diferentes a los valores típicos y por consiguiente pueden ser detectados de manera rápida y sencilla.</p>
+<p>Es muy importante saber elegir una paleta de colores apropiada, pues de lo contrario estas gráficas pueden ser muy difíciles de interpretar.</p>
+</div>
+<div id="gráficas-de-dispersión-scatterplot" class="section level4 unnumbered hasAnchor">
+<h4>Gráficas de dispersión (scatterplot)<a href="tipos-de-gráficos-básicos.html#gráficas-de-dispersión-scatterplot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de dispersión son un poco más complejas que las analizadas anteriormente y su interpretación requiere de un cierto nivel de sofisticación por parte del usuario final. Sin embargo, se trata de una de las representaciones visuales más utilizadas en las disciplinas científicas, tanto en las ciencias exactas como en las sociales.</p>
+<p>Están basadas en un sistema cartesiano y tanto en el eje de las X (horizontal), como en el eje de las Y (vertical) se codifican atributos cuantitativos. Hasta el momento, en un eje teníamos valores cuantitativos y en el otro, valores categóricos. La razón principal por la que utilizamos la gráfica de dispersión es porque se analiza si existe una relación entre estos dos valores.</p>
+<p>El <strong>marcador necesariamente es un punto</strong>. Uno de los atributos se ubica en la posición horizontal y otro en el eje vertical. En la intersección de los dos valores es donde se coloca el punto.</p>
+<p>Son muy útiles para <strong>observar correlaciones</strong> entre las dos variables que estamos codificando, así como para poder observar <strong>tendencias, agrupamientos</strong> (clusters), identificar <strong>valores atípicos</strong>, o incluso, <strong>valores extremos</strong> si tenemos muy bien acotados los datos. Muchos de estos términos ya empiezan a hablar de un pequeño nivel de madurez de habilidades analíticas en nuestro receptor.</p>
+<p>En el ejemplo de la figura <a href="tipos-de-gráficos-básicos.html#fig:scatter">4.8</a>: podemos observar una comparación entre el número de decesos en carreteras y otras vialidades por cada 100,000 habitantes y el índice de desarrollo humano (HDI, Human Development Index), un índice muy popular en los últimos años para comparar, los diferentes niveles de madurez de países en cuanto a su nivel de educación, penetración de servicios sanitarios, su producto interno bruto y un conjunto de variables adicionales que tienen que ver con la calidad de vida de la persona humana.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatter"></span>
+<img src="figuras/scatter.jpg" alt="*Decesos en caminos vs HDI. Fuente: Elaboración propia con datos de la Organización Mundial de la Salud.*" width="60%" />
+<p class="caption">
+Figura 4.8: <em>Decesos en caminos vs HDI. Fuente: Elaboración propia con datos de la Organización Mundial de la Salud.</em>
+</p>
+</div>
+<p>Entrando más en detalle, podemos ver graficados diferentes puntos; si se tratara de una gráfica interactiva, al hacer clic sobre cualquier de los puntos podríamos ver a qué país hace referencia cada uno de ellos, pero al ser una gráfica estática es complicada extraer esta información.</p>
+<p><strong>Hipótesis</strong>. Al inicio de nuestro curso comentamos que uno de los usos de las representaciones visuales, es la validación de hipótesis. En este caso, es de suponer que entre más bajo sea el índice de desarrollo humano, la tasa de decesos en vialidades iría en aumento pues al haber menores niveles de educación y menores recursos, también se tendrían menores medidas preventivas como señalización y pavimentación adecuada en las vialidades.</p>
+<p><strong>Resolución de hipótesis</strong>. Al graficar los datos, parece ser que la hipótesis planteada se cumple. Podemos ver que conforme disminuye el HDI, va aumentando el número de decesos en vialidades por cada 100 000 habitantes. En definitiva, podemos encontrar una correlación negativa, debido a que la línea de tendencia está mostrando una relación descendente.</p>
+<p>Sin embargo, debemos recordar que una correlación no explica la causalidad. Nuestra gráfica únicamente apunta hacia dónde convendría realizar estudios más profundos</p>
+<p><strong>Elementos destacados</strong>. Este ejemplo también pone en evidencia otras bondades de las gráficas de dispersión. En este caso, podemos destacar dos valores atípicos:</p>
+<ul>
+<li><p><strong>Arabia Saudi</strong>: tiene un HDI bastante elevado y una tasa de decesos también muy alta. Este caso es atípico, ya que está lejos de la línea de tendencia azul. Podemos suponer que el alto valor en su índice de desarrollo humano está más relacionado con su producto interno bruto que con otras variables.</p></li>
+<li><p><strong>Afganistán</strong>: es otro caso atípico. Tiene un HDI bajo, pero sorprendentemente tiene un nivel medio de decesos por cada 100 000 habitantes.</p></li>
+<li><p>La gráfica también muestra algunos agrupamientos de países con un alto HDI y una tasa baja de decesos por cada 100 000 habitantes, y otro, un poco más dispersos, con valores medios para el HDI y para la tasa de decesos por cada 100 000 habitantes.</p></li>
+</ul>
+</div>
+<div id="gráficas-de-burbujas-bubble-plot" class="section level4 hasAnchor" number="4.3.1.1">
+<h4><span class="header-section-number">4.3.1.1</span> Gráficas de burbujas (bubble plot)<a href="tipos-de-gráficos-básicos.html#gráficas-de-burbujas-bubble-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A las gráficas de dispersión se les puede añadir otra variable activando nuevos canales visuales, como la tonalidad del punto y su tamaño. En este último caso, nos encontramos con las llamadas gráficas de burbujas (bubble plot).</p>
+<p>En la figura <a href="tipos-de-gráficos-básicos.html#fig:bubble">4.9</a> retomamos los datos del ejemplo anterior y añadimos una nueva variable: el Producto Interno Bruto per cápita, el cual se codifica con el tamaño proporcional del punto utilizado para cada país (un PIB per cápita mayor, se codificará con un punto con un radio mayor).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bubble"></span>
+<img src="figuras/bubble.jpg" alt="*Decesos en caminos vs HDI y PIB per cápita. Fuente: Elaboración propia con datos de la Organización Mundial de la Salud.*" width="60%" />
+<p class="caption">
+Figura 4.9: <em>Decesos en caminos vs HDI y PIB per cápita. Fuente: Elaboración propia con datos de la Organización Mundial de la Salud.</em>
+</p>
+</div>
+<p>Interpretando esta gráfica, podemos observar algo relativamente esperado, que es una aglomeración de países con productos internos brutos elevados y para todos ellos, el índice de desarrollo humano es muy alto y su tasa de mortalidad muy baja.</p>
+</div>
+</div>
+<div id="partes-de-un-todo" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Partes de un todo<a href="tipos-de-gráficos-básicos.html#partes-de-un-todo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="gráficas-de-pastel-1" class="section level4 unnumbered hasAnchor">
+<h4>Gráficas de pastel<a href="tipos-de-gráficos-básicos.html#gráficas-de-pastel-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de pastel o circulares (pie charts), son las más utilizadas cuando lo que se busca es representar <strong>las partes de un todo</strong>. Es decir, en qué proporción una serie de elementos contribuyen a la totalidad de las observaciones.</p>
+<p>En estas gráficas, el marcador es el área de la rebanada del pastel y el canal visual para codificar los valores, es un ángulo. En general, esta no es una buena decisión, pues como lo mencionamos en la primera unidad del curso, nuestro sistema de percepción visual es muy impreciso para asociar áreas con magnitudes y sólo distingue de manera correcta los ángulos de 45°, 90°, 180°, 270° y el de 135°.</p>
+<p>La figura <a href="tipos-de-gráficos-básicos.html#fig:pie1">4.10</a> pone en evidencia la dificultad que tenemos para asociar magnitudes con áreas, algo que, como hemos mencionado varias veces, resulta mucho más sencillo con las gráficas de barras.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pie1"></span>
+<img src="figuras/pie1.JPG" alt="*Gráficas de pastel vs. gráficas de barras. Fuente: [@Muzner2015]*" width="60%" />
+<p class="caption">
+Figura 4.10: <em>Gráficas de pastel vs. gráficas de barras. Fuente: <span class="citation">(<a href="#ref-Muzner2015" role="doc-biblioref"><strong>Muzner2015?</strong></a>)</span></em>
+</p>
+</div>
+<p>Quizás podamos identificar qué rebanada es la mayor en las gráficas (A) y (C), pero será más complicado determinar cuál es la mayor en (B) o la diferencia entre las rebanadas azul y verde en las tres gráficas.</p>
+<p>Sin embargo, dado que las gráficas de pastel son sumamente populares, si se decide utilizarlas, puede resultar conveniente añadir etiquetas con los valores de las rebanadas, como se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:pie2">4.11</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pie2"></span>
+<img src="figuras/pie2.JPG" alt="*Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.*" width="40%" />
+<p class="caption">
+Figura 4.11: <em>Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.</em>
+</p>
+</div>
+<div id="algunas-recomendaciones-al-utilizar-las-gráficas-de-pastel" class="section level5 unnumbered hasAnchor">
+<h5>Algunas recomendaciones al utilizar las gráficas de pastel<a href="tipos-de-gráficos-básicos.html#algunas-recomendaciones-al-utilizar-las-gráficas-de-pastel" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Si se decide utilizar una gráfica de pastel, debemos cuidar que tenga <strong>no más de 10 elementos</strong>; de lo contrario, será todavía más difícil comparar las magnitudes y, en general, no quedará espacio para asignar etiquetas de valores a cada rebanada.</p>
+<p>Por supuesto, dado que estamos mostrando la proporción de cada elemento a la totalidad, <strong>la suma de las partes debe dar el 100% en los 360°</strong>. Como se mencionó en el capítulo anterior, sorprende observar la cantidad de veces que esta simple regla no se cumple.</p>
+<p>También se considera una buena práctica, dada nuestra capacidad para identificar algunos ángulos, que <strong>la gráfica inicie en los 0°</strong> (a las 12:00 en punto) y, de preferencia, que los datos se desplieguen de menor a mayor.</p>
+</div>
+</div>
+<div id="alternativas-a-las-gráficas-pastel" class="section level4 hasAnchor" number="4.3.2.1">
+<h4><span class="header-section-number">4.3.2.1</span> Alternativas a las gráficas pastel<a href="tipos-de-gráficos-básicos.html#alternativas-a-las-gráficas-pastel" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Además de las gráficas de pastel, tenemos otras representaciones populares para mostrar las partes de un todo. De hecho, ya conocimos una de ellas: la gráfica de barras apiladas, en la que se mostraban las cantidades individuales de cada elemento que, sumados, conformaban la totalidad de una observación.</p>
+<p>Cuando lo que deseamos mostrar no es la cantidad absoluta sin la proporción en la que contribuye cada elemento a la totalidad, como ocurre con las gráficas de pastel, podemos utilizar una <strong>gráfica de barras apiladas al 100%</strong> como la que aparece en la figura <a href="tipos-de-gráficos-básicos.html#fig:barraapil">4.12</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barraapil"></span>
+<img src="figuras/barraapil.jpg" alt="*Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.*" width="40%" />
+<p class="caption">
+Figura 4.12: <em>Usuarios de smartphone por rango de edad. Fuente: Elaboración propia con datos de MConsultingPrep.</em>
+</p>
+</div>
+<p>En cada columna el total acumulativo es de 100% y se aprecia con más claridad la proporción que cada categoría secundaria (los rangos de edad) contribuye a la totalidad.</p>
+<p>El ejemplo anterior muestra una ventaja adicional sobre las gráficas de pastel si tenemos otra variable categórica y esta es una variable temporal: las gráficas de pastel muestran una fotografía estática, es decir, la contribución de las partes de un todo a la totalidad. Si tenemos varios momentos discretos, como en el ejemplo anterior (los años 2014, 2015 y 2016), podríamos desplegar varias gráficas de pastel, una por instante de tiempo, pero resulta mucho más práctico representar esta información con varias gráficas de barras apiladas, como se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:barraapil2">4.13</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:barraapil2"></span>
+<img src="figuras/barraapil2.JPG" alt="*Uso de barras apiladas para mostrar evolución temporal. Fuente: Adaptado de [@Munzner2014]*" width="95%" />
+<p class="caption">
+Figura 4.13: <em>Uso de barras apiladas para mostrar evolución temporal. Fuente: Adaptado de <span class="citation">(<a href="#ref-Munzner2014" role="doc-biblioref">Munzner 2014</a>)</span></em>
+</p>
+</div>
+<p>La gráfica de pastel a la izquierda muestra la proporción de los elementos a la totalidad en un momento determinado. Para nuestro argumento, los valores, que son casi ilegibles, realmente no son de interés.</p>
+<p>En la gráfica de la derecha, que es una gráfica de barras apiladas al 100%, tenemos varios puntos discretos de la categoría principal; sería totalmente impráctico tener una gráfica de pastel para cada punto. Además, no se podría observar con tanta claridad cómo evoluciona la contribución de cada elemento a la totalidad a lo largo del tiempo.</p>
+<p>Cuando la categoría principal es continua o casi continua y lo que nos interesa es mostrar cómo varía la proporción de cada elemento a la totalidad, la gráfica que se recomienda utilizar es la <strong>gráfica de áreas apiladas al 100%</strong> como la que se muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:areaapil">4.14</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:areaapil"></span>
+<img src="figuras/areaapil.jpg" alt="*Equipamiento tecnológico en hogares. Fuente: Elaboración propia con datos de ENDUTIH, 2022*" width="60%" />
+<p class="caption">
+Figura 4.14: <em>Equipamiento tecnológico en hogares. Fuente: Elaboración propia con datos de ENDUTIH, 2022</em>
+</p>
+</div>
+</div>
+</div>
+<div id="gráficas-para-sumarización-de-datos" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Gráficas para sumarización de datos<a href="tipos-de-gráficos-básicos.html#gráficas-para-sumarización-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En ocasiones no solo se busca presentar los datos en crudo, sino que es necesario analizar cómo se distribuyen, hacer agregaciones o se requiere presentar datos derivados. Estas son actividades muy comunes cuando se hace está haciendo un <strong>análisis exploratorio</strong> de los datos y se busca entender algunas de sus propiedades estadísticas. A continuación, analizaremos una serie de gráficas, y con ellas, además de ver su correlación, analizaremos:
+* Si sus datos tienen una representación estadística.
+* Si tienen características o propiedades que permitan interpretar los datos con fineza.</p>
+<p>Tenemos una amplia familia de representaciones visuales, sin embargo, mencionaremos cuatro de ellas:
+* Histogramas
+* Gráficas de densidad
+* Gráficas de caja
+* Gráficas de violín</p>
+<div id="histogramas" class="section level4 hasAnchor" number="4.3.3.1">
+<h4><span class="header-section-number">4.3.3.1</span> Histogramas<a href="tipos-de-gráficos-básicos.html#histogramas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El histograma es la gráfica más popular para visualizar cómo se distribuyen nuestros datos. Se trata de una generalización de las gráficas de barras que muestra <strong>la frecuencia de ocurrencia</strong> de los datos sobre distintos intervalos. El tamaño de la barra está conformado por la sumo de los elementos que están considerados en ese intervalo.</p>
+<p>A partir de los datos originales, se generan datos derivados: la muestra entera de datos se divide en intervalos llamados casillas o <em>bins</em>. Estos son los cortes de cada columna, y la magnitud de la columna en cada casilla muestra el número de ocurrencias de los datos que caen en ese intervalo.</p>
+<p>El histograma muestra dónde y cómo se concentran los datos, es decir, cómo se distribuyen en el rango de valores de los intervalos. También permiten mostrar valores máximos, mínimos, valores atípicos y detectar patrones.</p>
+<p>La selección del intervalo para cada columna, o del número de casillas tiene un fuerte impacto en la interpretación visual del histograma como se muestra en el siguiente ejemplo:</p>
+<p>En este ejemplo se está graficando la altura media de varones en 1996. Se tiene un valor por cada país y se registraron 208 países. Nos interesa ver cómo se distribuyen esas alturas en la media de la población mundial.
+* En la imagen de la izquierda, de la figura <a href="tipos-de-gráficos-básicos.html#fig:bins">4.15</a> observamos de qué manera se pueden compartimentar las casillas con mucha fineza, teniendo como resultado una gran cantidad de barras que parecen espigas. En ella, podemos observar con claridad el valor máximo, los valores faltantes, etcétera. El principal problema que tiene es su alto grado de granularidad, que dificulta la visualización.</p>
+<ul>
+<li><p>En la imagen del centro, para reducir la granularidad de la primera imagen, se han definido intervalos más gruesos. Desaperecen los huecos de la primera imagen ya que se agrupan las ocurrencias en un rango mayor de alturas. Se percibe mejor cómo se distribuyen los datos a lo largo del eje.</p></li>
+<li><p>La imagen de la derecha muestra con mayor claridad la importancia de elegir cuidadosamente el ancho de las casillas, ya que aquí se produce una pérdida de información al acumular demasiadas ocurrencias en una sola casilla. En el caso extremo, si tuviéramos una sola caja, tendríamos como resultado un rectángulo con altura 208, el número de elementos en nuestro conjunto de datos.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bins"></span>
+<img src="figuras/bins.JPG" alt="*Distribución de alturas de varones en 1996. Fuente: Elaboración propia con datos de Our World in Data.*" width="95%" />
+<p class="caption">
+Figura 4.15: <em>Distribución de alturas de varones en 1996. Fuente: Elaboración propia con datos de Our World in Data.</em>
+</p>
+</div>
+</div>
+<div id="gráficas-de-densidad" class="section level4 hasAnchor" number="4.3.3.2">
+<h4><span class="header-section-number">4.3.3.2</span> Gráficas de densidad<a href="tipos-de-gráficos-básicos.html#gráficas-de-densidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de densidad son elementos que van a resultar de ayuda, a la hora de saber si un histograma se asemeja a algún tipo de función de distribución. Se presenta un ejemplo en la figura <a href="tipos-de-gráficos-básicos.html#fig:densi">4.16</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:densi"></span>
+<img src="figuras/densi.jpg" alt="*Distribución de alturas de varones en 1996. Fuente: Elaboración propia con datos de Our World in Data.*" width="40%" />
+<p class="caption">
+Figura 4.16: <em>Distribución de alturas de varones en 1996. Fuente: Elaboración propia con datos de Our World in Data.</em>
+</p>
+</div>
+<p>Tenemos un histograma con una moda (máximo número de ocurrencias en nuestra muestra) en 160 cm, aproximadamente y con un sesgo a la derecha (hay más valores a la derecha de la moda que a la izquierda).</p>
+<p>Si en vez de trabajar con elementos discretos se requiere una función continua, entonces se buscará generar una gráfica de densidad. Son más precisas para aproximar la forma de la distribución de los datos porque ya no se depende del tamaño de los intervalos.</p>
+<p>Existen muchas funciones para poder hacer la estimación a una línea continua de los datos discretos. El proceso es el denominado como <strong>“suavizado” o kernel smoothing</strong>, y consiste en realizar un promedio ponderado de los diferentes intervalos.</p>
+</div>
+<div id="gráficas-de-cajas" class="section level4 hasAnchor" number="4.3.3.3">
+<h4><span class="header-section-number">4.3.3.3</span> Gráficas de cajas<a href="tipos-de-gráficos-básicos.html#gráficas-de-cajas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>El empleo de gráficas de cajas, también conocidas como de cajas y bigotes, son para un público más especializado o para cuando se quiere generar <strong>narrativas que requieren de un mayor conocimiento analítico</strong>. Las estudiaremos debido a su alta popularidad.</p>
+<p>En su forma más común, presentan una síntesis compacta de la distribución de nuestros datos mediante un rectángulo con dos líneas a los extremos en donde típicamente se muestran cinco componentes estadísticos que aparecen en la figura <a href="tipos-de-gráficos-básicos.html#fig:caja">4.17</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:caja"></span>
+<img src="figuras/caja.JPG" alt="*Gráfica de caja y bigotes. Fuente: Elaboración propia*" width="40%" />
+<p class="caption">
+Figura 4.17: <em>Gráfica de caja y bigotes. Fuente: Elaboración propia</em>
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>La línea central al interior de la caja indica cuál es <strong>la mediana</strong> o valor central de todos nuestros datos, es decir, el 50% se encuentran por encima de la mediana y el 50% por debajo.</li>
+<li>La base de la caja (Q1) indica <strong>el primer cuartil</strong> (percentil 25%); el 25% de los datos se encuentran por debajo de este valor.</li>
+<li>La parte superior de la caja (Q2) indica <strong>el tercer cuartil</strong> (percentil 75%); el 75% de los datos se encuentran por debajo de este valor. La diferencia entre el tercer cuartil y el primero, se conoce como el <strong>rango intercuartil (IQR)</strong>.</li>
+<li>La línea por debajo de la base de la caja se encuentra en <strong>Q1 – 1.5*IQR</strong> y representa el extremo inferior de nuestra distribución.</li>
+<li>La línea por encima de la caja se encuentra en <strong>Q2+1.5*IQR</strong> y representa el extremo superior de nuestra distribución.<br />
+Puntos de la distribución por debajo del extremo inferior o por encima del extremo superior, son considerados <strong>valores atípicos</strong>.</li>
+</ol>
+<p>Estas gráficas son mucho más compactas que un histograma y esto nos permite comparar las estadísticas descriptivas de distintos conjuntos de datos, simplemente poniéndolas una al lado de la otra como en el siguiente ejemplo que muestra en la figura <a href="tipos-de-gráficos-básicos.html#fig:caja2">4.18</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:caja2"></span>
+<img src="figuras/caja2.JPG" alt="*Agrupación de gráficas de caja y bigotes. Fuente: Elaboración propia con el dataset mtcars de R*" width="50%" />
+<p class="caption">
+Figura 4.18: <em>Agrupación de gráficas de caja y bigotes. Fuente: Elaboración propia con el dataset mtcars de R</em>
+</p>
+</div>
+<p>Se muestran las gráficas de cajas de la distribución en el consumo de gasolina (millas por galón) para autos de dos, cuatro y ocho cilindros. Los datos para el conjunto de dos cilindros están mucho más dispersos (la caja es más alta) per no se muestran valores atípicos, al contrario del conjunto para ocho cilindros, donde los datos están sumamente concentrados, pero se observan valores atípicos tanto en el extremo superior como en el inferior.</p>
+</div>
+<div id="gráficas-de-violín" class="section level4 hasAnchor" number="4.3.3.4">
+<h4><span class="header-section-number">4.3.3.4</span> Gráficas de violín<a href="tipos-de-gráficos-básicos.html#gráficas-de-violín" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las gráficas de caja son sumamente compactas, pero se pierde algo de información estadística, en particular, la forma de la distribución de los datos. Cuando <strong>la forma de la distribución de los datos es importante</strong>, podemos recurrir a las gráficas de violín.</p>
+<p>En estas gráficas, la forma de la distribución se dibuja a izquierda y derecha simplemente para que la gráfica resultante sea visualmente más atractiva. En la figura <a href="tipos-de-gráficos-básicos.html#fig:violin3">4.19</a> se muestran las gráficas de violín para el ejemplo de la figura <a href="tipos-de-gráficos-básicos.html#fig:caja2">4.18</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:violin3"></span>
+<img src="figuras/violin3.JPG" alt="*Gráficas de violín para el ejemplo de la figura anterior. Fuente: Elaboración propia con el dataset mtcars de R*" width="70%" />
+<p class="caption">
+Figura 4.19: <em>Gráficas de violín para el ejemplo de la figura anterior. Fuente: Elaboración propia con el dataset mtcars de R</em>
+</p>
+</div>
+<p>Se debe tener un poco de entrenamiento para poder interpretar adecuadamente las gráficas de violín. En la primera gráfica de la imagen anterior, se observa que los datos están distribuidos de manera casi uniforme en el rango de los cuartiles Q1 y Q3. No se observan datos atípicos. En cambio, en la gráfica de violín para los autos de ocho cilindros, se observa una distribución muy parecida a una curva normal, con un pequeño triángulo inferior debido al valor atípico por debajo del extremo inferior.</p>
+<p>Si se está familiarizado con la interpretación de las formas de las funciones de distribución, se podrán obtener conclusiones con mucha facilidad al ver las características de sus gráficas de violín. Centrémonos en un ejemplo en concreto en el que se está graficando el consumo en la ciudad (figura <a href="#fig:violin4"><strong>??</strong></a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:violin2"></span>
+<img src="figuras/violin2.jpg" alt="*Consumo de gasolina para autos subcompactos. Fuente: Elaboración propia con el dataset mtcars de R*" width="70%" />
+<p class="caption">
+Figura 4.20: <em>Consumo de gasolina para autos subcompactos. Fuente: Elaboración propia con el dataset mtcars de R</em>
+</p>
+</div>
+<p>En la imagen de la gráfica de violín a la derecha, para autos subcompactos vemos una muy larga distribución de datos, mientras que en la de caja a la izquierda no apreciamos una caja muy grande. El motivo por el que la gráfica de violín se está arrastrando demasiado hacia arriba es porque en la gráfica de caja podemos localizar un valor atípico.</p>
+
+</div>
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Munzner2014" class="csl-entry">
+Munzner, Tamara. 2014. <em>Visualization Analysis and Design</em>. CRC Press.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="mejores-prácticas-y-recomendaciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="redes-jerárquicas-y-redes-de-vínculos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-VizGrafBasicas.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
